@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: MIT
+# Every push and pull request: published files are unedited, and the complexity limits, the
+# standalone header check, the library and the sanitizer tests all pass.
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Published files match EXPORTED (edit upstream, not here)
+        run: python3 tools/export-public dsp --verify .
+      - name: Headers, library and tests (ASan + UBSan, TSan)
+        run: |
+          # ThreadSanitizer cannot map its shadow memory with the kernel's default 32 bits of
+          # mmap randomisation on this image.
+          sudo sysctl -w vm.mmap_rnd_bits=28
+          make headers lib test CXX=clang++
