@@ -1,6 +1,6 @@
-# Written by tools/export-public from the squatch-dsp development tree at 69b8d969b5b2f4424cb56a32fb9d162ba63a6b12 (.github/FUNDING.yml only).
+# Written by tools/export-public from the squatch-dsp development tree at c6714d383e8e0fa2bdf5f2ffd861b746a1c86012 (.github/FUNDING.yml only).
 # Do not edit these files here: change them upstream and export again (see the README).
-ce99a248a9e4d308fc681e3c864bd1fc42f0775caa17f2be3bc2154479821dbb  .github/FUNDING.yml
+b1f7ed26a41e8cc4072e6ff565f628c0ee6445997f78e28eb3e06d67ca7a3bb8  .github/FUNDING.yml
 d4728b11d5f502d86ef85c8cba5e687260390f47d7b8c3e5fcc9d525b9d7aaaa  .github/workflows/ci.yml
 962d32493a040457f9226e47062750f325cafd7e24d9fbec32d3de6450635266  .gitignore
 d2918130f1ac9048e1c5b9ab4a9f2718706537081f2affc3e68104a69ee873c4  LICENSE
